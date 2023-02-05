@@ -1,13 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Card.css"
 
-const Card =() =>{
+const Card =({movies}) =>{
     return(
-        <div className="image" >
-        <img src="téléchargement.jpeg" alt=""></img>
-        <img src="téléchargement (2).jpeg" alt=""></img>
-        <img src="téléchargement (3).jpeg" alt=""></img>
-        </div>
+        <Link to ={'/movie'} state={movies}>
+          <img src={movies.posterurl} alt=""></img>
+        </Link>
     )
 }
 export default Card;
